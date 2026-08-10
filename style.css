@@ -1,0 +1,535 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #071426;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    background: #09182c;
+
+    border-bottom: 1px solid #1d3554;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo span {
+    font-size: 25px;
+    font-weight: 800;
+    color: #2196ff;
+}
+
+.logo h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d7deea;
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2196ff;
+}
+
+nav .github {
+    padding: 8px 16px;
+
+    border: 1px solid #2196ff;
+    border-radius: 6px;
+
+    color: #2196ff;
+}
+
+nav .github:hover {
+    background: #2196ff;
+    color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+
+    padding: 80px 20px 55px;
+}
+
+.small-title {
+    color: #2196ff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #2196ff;
+}
+
+.hero-text {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #9eacbf;
+
+    font-size: 16px;
+}
+
+.line {
+    width: 120px;
+    height: 3px;
+
+    background: #2196ff;
+
+    margin: 25px auto 0;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   TASK SECTION
+========================= */
+
+.tasks-section {
+    padding: 20px 5% 80px;
+}
+
+.tasks-container {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================
+   TASK CARD
+========================= */
+
+.task-card {
+
+    position: relative;
+
+    background: #0c1d34;
+
+    border: 1px solid #1c3553;
+
+    border-radius: 12px;
+
+    padding: 28px 24px;
+
+    min-height: 290px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.35s ease;
+
+    overflow: hidden;
+}
+
+
+/* TOP GLOW */
+
+.task-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 3px;
+
+    top: 0;
+    left: 0;
+
+    background: #2196ff;
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: 0.35s;
+}
+
+.task-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* CARD HOVER */
+
+.task-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #2196ff;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* TASK NUMBER */
+
+.task-number {
+
+    color: #2196ff;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ICON */
+
+.task-icon {
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #102945;
+
+    border-radius: 10px;
+
+    font-size: 25px;
+
+    margin-bottom: 18px;
+}
+
+
+/* TITLE */
+
+.task-card h3 {
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+    color: #ffffff;
+}
+
+
+/* DESCRIPTION */
+
+.task-card p {
+
+    color: #91a1b6;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* BUTTON */
+
+.view-btn {
+
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-top: auto;
+
+    padding: 9px 17px;
+
+    text-decoration: none;
+
+    color: #2196ff;
+
+    border: 1px solid #2196ff;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+
+    background: #2196ff;
+
+    color: #ffffff;
+
+    box-shadow: 0 5px 20px rgba(33, 150, 255, 0.25);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+
+    max-width: 900px;
+
+    margin: 20px auto 80px;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    background: #0c1d34;
+
+    border: 1px solid #1c3553;
+
+    border-radius: 12px;
+}
+
+.about h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.about p {
+
+    color: #94a4b9;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    background: #09182c;
+
+    border-top: 1px solid #1c3553;
+
+    color: #91a1b6;
+}
+
+footer span {
+
+    color: #2196ff;
+
+    font-size: 20px;
+}
+
+footer strong {
+
+    color: white;
+}
+
+.copyright {
+
+    margin-top: 5px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .tasks-container {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .hero h1 {
+
+        font-size: 42px;
+
+    }
+}
+
+
+/* =========================
+   TABLET / SMALL
+========================= */
+
+@media (max-width: 800px) {
+
+    .header {
+
+        height: auto;
+
+        padding: 18px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav {
+
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .tasks-container {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .hero {
+
+        padding-top: 60px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 36px;
+
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 550px) {
+
+    .logo h2 {
+
+        font-size: 17px;
+
+    }
+
+    nav a {
+
+        font-size: 13px;
+
+    }
+
+    .tasks-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .hero h1 {
+
+        font-size: 30px;
+
+    }
+
+    .hero-text {
+
+        font-size: 14px;
+
+    }
+
+    .task-card {
+
+        min-height: 270px;
+
+    }
+
+    .about {
+
+        margin-left: 5%;
+        margin-right: 5%;
+
+    }
+}
